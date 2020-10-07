@@ -1,0 +1,37 @@
+let raceNumber = Math.floor(Math.random() * 1000);
+
+
+
+console.log(`number:${raceNumber}`);
+
+//if (raceNumber >= 500){
+//  console.log(`human is a adult`);
+//} else if (raceNumber <= 1000){
+//  console.log(`human is a youth`);
+//}
+
+//const registeredEarly = true;
+const registeredEarly = false;
+
+//let runnersAge = 30;
+//let runnersAge = 12;
+let runnersAge = 18;
+
+if (runnersAge >= 18 && registeredEarly == true){
+  raceNumber += 1000;
+}
+
+
+console.log(`number:${raceNumber}`);
+
+if (runnersAge >= 18 && registeredEarly == true){
+  console.log(`You are number:${raceNumber} you will race at 9:30 am.`);
+} else if (runnersAge >= 18 && registeredEarly == false){
+  console.log(`You are number:${raceNumber} you will race at 11:00 am.`);
+}
+if (runnersAge < 18){
+  console.log(`You are number:${raceNumber} you will race at 12:30 am.`);
+}
+if (runnersAge === 18){
+  console.log(`Please see the registration desk`);
+}
