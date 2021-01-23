@@ -1,0 +1,118 @@
+<style>
+html,
+body {
+  display: block;
+  background: black;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+
+}
+
+[data-expand] {
+  display: inline-bloc;
+  border: 0.02cm solid red;
+  border-radius: 2em;
+  padding: 1em;
+  overflow: hidden;
+}
+
+[data-expand=""] {
+  animation: close 1s forwards;
+}
+
+[data-expand=""] > *:not(*:first-child) {
+  display: none;
+}
+
+[data-expand="open"] {
+  animation: open 1s forwards;
+}
+
+[data-expand="open"] > *:first-child {
+  display: none;
+}
+
+[data-expand="open"] > *:not(*:first-child) {
+  display: block;
+}
+
+@keyframes open {
+  0% {
+    background: red;
+    height:
+      1em;
+    width: 0;
+    padding: 0;
+  }
+
+  50% {
+    height: 0;
+    width: 0;
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0);
+    height: 10em;
+    width: 25vw;
+    padding: 1em;
+
+  }
+}
+
+@keyframes close {
+  0% {
+    background: red;
+    height: 10em;
+    width: 25vw;
+    padding: 0;
+
+  }
+
+  50% {
+    height: 0;
+
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0);
+    height: unset;
+    width: unset;
+    padding: 12m;
+
+  }
+}
+</style>
+<html>
+<head>
+  <title>Expanding Menu</title>
+</head>
+<body>
+  <article data-expand>
+    <span>something 1 </span>
+    <h2>
+      more details
+    </h2>
+    <p>
+      ....
+    </p>
+  </article>
+
+</body>
+<script>
+window.addEventListener("load", function() {
+  var nodes = document.
+  querySelectorAll('[data-expand]');
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].addEventListener("click", function() {
+      if (this.getAttribute("data-expand") != "open")
+      this.setAttribute("data-expand", "open");
+      else
+        this.setAttribute("data-expand", "");
+
+    });
+  }
+});
+</script>
+</html>
