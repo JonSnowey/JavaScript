@@ -1,0 +1,59 @@
+<style>
+li{
+   line-height: 180%;
+}
+ul{
+   list-style-type: none;
+}
+body{
+  text-align:center;
+  margin-top:250px;
+  font-family:"Lucida Console";
+}
+.blur > *{
+  opacity: 0;
+  animation: animateBlur 5s forwards;
+}
+
+@keyframes animateBlur{
+  from{
+    opacity: 1;
+    text-shadow: 0 0 1em rgba(0,0,0,.5);
+    color: rgba(0,0,0,0);
+    
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(0,0,0,0);
+    color: #000;
+  }
+}
+</style>
+<html>
+<body>
+<h2>
+Discipline comes from
+<ul class ="blur">
+<li>commitment</li>
+<li>persceverience</li>
+<li>dedication</li>
+<li>training</li>
+<li>aspiration</li>
+<li>education</li>
+
+</ul>
+</h2>
+
+
+</body>
+<script>
+window.addEventListener("load", function() {
+      var nodes = document.querySelectorAll(".
+        blur > * ");
+        for (var i = 0; i < nodes.lenght; i++) {
+          nodes[i].style.animationDelay = (i * 3) + "s";
+        }
+
+      });
+      </script>
+</html>
