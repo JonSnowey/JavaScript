@@ -11,3 +11,34 @@ const monsterFactory = (name, age, energySource, catchPhrase) => {
 
 const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
 ghost.scare(); // 'BOO!'
+
+/////////// Robot Factory///////////////////////////////////////////////////
+
+const robotFactory = (model, mobile) => {
+  return {
+    model : model,
+		mobile: mobile,
+		beep () {
+      if( model === 'Samsung Alexa'){
+        console.log('Searching the web for..');
+      }
+    
+      if( model === 'P-800'){
+        console.log('Beep BOO');
+      
+      }
+       if( model === 'P-500'){
+        console.log('Beep BOOP');
+      
+      }
+     
+    }
+	}
+};
+
+const tinCan = robotFactory('P-500', true);
+const tinMan = robotFactory('P-800', true);
+const Alexa = robotFactory('Samsung Alexa', true);
+tinCan.beep();
+tinMan.beep();
+Alexa.beep();
