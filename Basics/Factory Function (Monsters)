@@ -42,3 +42,18 @@ const Alexa = robotFactory('Samsung Alexa', true);
 tinCan.beep();
 tinMan.beep();
 Alexa.beep();
+
+
+
+/////////////////Property Value Shorthand/////////////////////////
+
+const monsterFactory = (name, age, energySource, catchPhrase) => {
+  return { 
+    name,
+    age, 
+    energySource,
+    scare() {
+      console.log(catchPhrase);
+    } 
+  }
+};
