@@ -1,0 +1,50 @@
+/// this program tracks teams it's individuals, games and scores///
+
+const team = {
+  _players: [
+    {firstName: 'John', lastName: 'Fernando', age: 30},
+    {firstName: 'Travis', lastName: 'Montana', age: 41},
+    {firstName: 'Rodrigez',lastName: 'Fernandez',age: 27},
+  ],
+  _games: [
+    {opponent: 'Broncos', teamPoints: 22, opponentPoints: 17},
+    {opponent: 'Rangers', teamPoints: 12, opponentPoints: 24},
+    {opponent: 'Falcons', teamPoints: 42, opponentPoints: 19},
+  ],
+
+get players(){
+  return this._players;
+},
+
+get games(){
+  return this._games;
+},
+  
+addPlayer(firstName, lastName, age){
+  let player = {
+    firstName: firstName,
+    lastName: lastName,
+    age: age
+  };
+  this.players.push(player);
+},
+
+addGame(opponent, teamPoints, oppPoints){
+  const game ={
+    opponent: opponent,
+    teamPoints: teamPoints,
+    opponentPoints: oppPoints,
+  };
+  this.games.push(game);
+}
+
+
+};
+
+team.addPlayer('Steph', 'Curry', 28);
+team.addPlayer('Lisa', 'Leslie', 44);
+team.addPlayer('Bugs', 'Bunny', 76);
+
+team.addGame('Titans', 100, 98);
+
+console.log(team.games);
